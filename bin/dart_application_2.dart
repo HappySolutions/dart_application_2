@@ -6,7 +6,6 @@ void main() {
 
 String longestCommonPrefix(List<String> strs) {
   var result = "";
-  var minLength = strs.map((str) => str.length).reduce((a, b) => a < b ? a : b);
   strs.sort((a, b) => a.length.compareTo(b.length));
   print(strs);
   for (var i = 0; i < strs[0].length; i++) {
@@ -21,6 +20,5 @@ String longestCommonPrefix(List<String> strs) {
     }
   }
   print(result);
-
   return result;
 }
